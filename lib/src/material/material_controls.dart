@@ -255,7 +255,12 @@ class _MaterialControlsState extends State<MaterialControls>
       opacity: notifier.hideStuff ? 0.0 : 1.0,
       duration: const Duration(milliseconds: 300),
       child: Container(
-        height: barHeight + (chewieController.isFullScreen ? 10.0 : 0),
+        decoration: const BoxDecoration(
+            gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [Colors.transparent, Color(0xFF030303)])),
+        height: barHeight + (chewieController.isFullScreen ? 10.0 : 8.0),
         padding: EdgeInsets.only(
           left: 20,
           bottom: !chewieController.isFullScreen ? 10.0 : 0,
@@ -324,6 +329,7 @@ class _MaterialControlsState extends State<MaterialControls>
             height: barHeight,
             padding: const EdgeInsets.only(
               left: 6.0,
+              bottom: 3.0
             ),
             child: Icon(
               _latestValue.volume > 0 ? Icons.volume_up : Icons.volume_off,
