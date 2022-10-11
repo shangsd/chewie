@@ -327,10 +327,7 @@ class _MaterialControlsState extends State<MaterialControls>
         child: ClipRect(
           child: Container(
             height: barHeight,
-            padding: const EdgeInsets.only(
-              left: 6.0,
-              bottom: 3.0
-            ),
+            padding: const EdgeInsets.only(left: 6.0, bottom: 3.0),
             child: Icon(
               _latestValue.volume > 0 ? Icons.volume_up : Icons.volume_off,
               color: Colors.white,
